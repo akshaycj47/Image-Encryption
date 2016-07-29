@@ -1,0 +1,25 @@
+{
+  "name": "@akshaycj47/akshaycj47-image-encryption",
+  "version": "0.0.0",
+  "description": "Module that encrypts and decrypts images. Symmetric key encryption is used for encryption and decryption",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "lab -L",
+    "test-cov-html": "lab -r html -o coverage.html"
+  },
+  "author": "Akshay Sawant",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "code": "^2.1.0",
+    "lab": "^8.0.2"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "crypto": "0.0.3",
+    "nconf": "^0.8.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

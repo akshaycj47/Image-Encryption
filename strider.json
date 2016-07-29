@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    {
+      "id": "node",
+      "enabled": true,
+      "showStatus": true,
+      "config": {
+        "test": "npm test",
+        "caching": "strict",
+        "runtime": "5.6.0",
+        "fork": "Node.js"
+      }
+    }
+  ]
+}
