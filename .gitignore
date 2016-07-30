@@ -82,3 +82,6 @@ images_regular/
 
 # Encrypted Images
 images_encrypted/
+
+# Config file
+config.json
