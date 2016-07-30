@@ -26,7 +26,9 @@ ImageEncryption.encryptImage(params, (err, res) => {
 
     if (!err) {
         // Image encrypted and stored successfully
-        // res contains 
+        // res contains id ('STRING_VALUE') which is the output file path,
+        // encrypted buffer ('STRING_VALUE'), and ecrypted data key
+        // ('STRING_VALUE')
     }
 });
 ```
@@ -43,7 +45,8 @@ ImageEncryption.decryptImage(params, (err, res) => {
 
     if (!err) {
         // Image decrypted and stored successfully
-        // res contains 
+        // res contains encrypted buffer ('STRING_VALUE'), and 
+        // encrypted data key ('STRING_VALUE')
     }
 });
 ```
