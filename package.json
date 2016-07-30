@@ -16,6 +16,7 @@
   "dependencies": {
     "async": "^1.5.2",
     "crypto": "0.0.3",
+    "json-fs-store": "^1.0.0",
     "nconf": "^0.8.4"
   },
   "repository": {
