@@ -19,8 +19,8 @@ const ImageEncryption = require('@akshaycj47/akshaycj47-image-encryption');
 const ImageEncryption = require('@akshaycj47/akshaycj47-image-encryption');
 
 const params = {
-    inputFilePath = 'STRING_VALUE',
-    outputFilePath = 'STRING_VALUE'
+    inputPath = 'STRING_VALUE',
+    outputPath = 'STRING_VALUE'
 };
 ImageEncryption.encryptImage(params, (err, res) => {
 
@@ -36,8 +36,8 @@ ImageEncryption.encryptImage(params, (err, res) => {
 const ImageEncryption = require('@akshaycj47/akshaycj47-image-encryption');
 
 const params = {
-    inputFilePath = 'STRING_VALUE',
-    outputFilePath = 'STRING_VALUE'
+    inputPath = 'STRING_VALUE',
+    outputPath = 'STRING_VALUE'
 };
 ImageEncryption.decryptImage(params, (err, res) => {
 
