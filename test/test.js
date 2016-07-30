@@ -38,6 +38,21 @@ describe('test image encryption', () => {
         });
         describe('fails', () => {
 
+            it('does not encrypt when input file is invalid', (done) => {
+
+                const params = {
+                    inputPath: './incorrect_directory/image1.jpg',
+                    outputPath: './images_encrypted/image1.enc.jpg'
+                };
+                ImageEncryption.encryptImage(params, (err, res) => {
+
+                    expect(res).not.to.exist();
+                    expect(err).to.exist();
+                    expect(err.message).equals('ENOENT: no such file or directory');
+                    expect(err.code).equals('notFound');
+                    done();
+                });
+            });
         });
     });
     describe('decryptImage(params, callback)', () => {
@@ -77,14 +92,45 @@ describe('test image encryption', () => {
                 ImageEncryption.decryptImage(params, (err, res) => {
 
                     expect(err).not.to.exist();
-
-                    //expect(err).to.exist();
+                    expect(res).to.exist();
+                    expect(res.encDataKey).equals(testData.encDataKey);
+                    expect(res.encBuff).equals(testData.encBuff);
                     done();
                 });
             });
         });
         describe('fails', () => {
 
+            it('does not decrypt when input path is invalid', (done) => {
+
+                const params = {
+                    inputPath: './images_decrypted/image1.enc.jpg',
+                    outputPath: './images_regular/image1.dec.jpg'
+                };
+                ImageEncryption.decryptImage(params, (err, res) => {
+
+                    expect(res).not.to.exist();
+                    expect(err).to.exist();
+                    expect(err.message).equals('ENOENT: no such file or directory');
+                    expect(err.code).equals('notFound');
+                    done();
+                });
+            });
+            it('does not decrypt when output path is invalid', (done) => {
+
+                const params = {
+                    inputPath: './images_encrypted/image1.enc.jpg',
+                    outputPath: './incorrect_directory/image1.dec.jpg'
+                };
+                ImageEncryption.decryptImage(params, (err, res) => {
+
+                    expect(res).not.to.exist();
+                    expect(err).to.exist();
+                    expect(err.message).equals('ENOENT: no such file or directory');
+                    expect(err.code).equals('notFound');
+                    done();
+                });
+            });
         });
     });
 });
