@@ -79,9 +79,12 @@ crashlytics-build.properties
 
 # Regular Images
 images_regular/
+actual_regular/
 
 # Encrypted Images
 images_encrypted/
+actual_encrypted/
 
 # Config file
 config.json
+
